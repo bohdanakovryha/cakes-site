@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шар за шаром · торти на замовлення</title>
+  <meta name="description" content="Авторські торти на замовлення: на день народження, весілля, дитяче свято. Обирайте торт і начинку, замовлення онлайн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__in">
+    <a href="#top" class="logo">Шар за шаром</a>
+    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav">
+      <a href="#top">Головна</a>
+      <a href="#cakes">Торти</a>
+      <a href="#fillings">Начинки</a>
+      <a href="#how">Як замовити</a>
+      <a href="#about">Про мене</a>
+      <a href="#faq">Питання</a>
+      <a href="#contacts">Контакти</a>
+      <a href="#order" class="nav__cta">Замовити торт</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== ГОЛОВНА ===== -->
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div class="hero__text">
+        <h1>Торт, який запам'ятають довше за саме свято</h1>
+        <p>Печу торти на замовлення у Києві: на день народження, весілля, хрестини чи просто тому, що хочеться. Ви обираєте форму й начинку, я роблю решту.</p>
+        <div class="hero__actions">
+          <a href="#order" class="btn btn--cherry">Замовити торт</a>
+          <a href="#cakes" class="btn btn--line">Подивитися роботи</a>
+        </div>
+        <ul class="hero__facts">
+          <li><b>від 750 грн</b> за кілограм</li>
+          <li><b>3 дні</b> мінімальний термін</li>
+          <li><b>12 начинок</b> на вибір</li>
+        </ul>
+      </div>
+
+      <!-- Намальований торт: шари збираються при завантаженні -->
+      <div class="cake" aria-hidden="true">
+        <div class="cake__berry"></div>
+        <div class="tier tier--3"><i></i></div>
+        <div class="tier tier--2"><i></i></div>
+        <div class="tier tier--1"><i></i></div>
+        <div class="cake__plate"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ТОРТИ (картки з script.js) ===== -->
+  <section id="cakes" class="block">
+    <div class="wrap">
+      <div class="block__head">
+        <h2>Торти</h2>
+        <p>Це приклади моїх робіт. Будь-який дизайн можна змінити під ваше свято: колір, напис, фігурки, кількість ярусів.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Фільтр тортів"></div>
+      <div class="cakes" id="cake-list"></div>
+    </div>
+  </section>
+
+  <!-- ===== НАЧИНКИ ===== -->
+  <section id="fillings" class="block block--pistachio">
+    <div class="wrap">
+      <div class="block__head">
+        <h2>Начинки в розрізі</h2>
+        <p>Так виглядає шматочок кожного торта всередині. Начинку обираєте окремо від дизайну, а в один торт можна поєднати дві.</p>
+      </div>
+      <div class="fillings" id="filling-list"></div>
+    </div>
+  </section>
+
+  <!-- ===== ЯК ЗАМОВИТИ ===== -->
+  <section id="how" class="block">
+    <div class="wrap">
+      <div class="block__head"><h2>Як замовити</h2></div>
+      <ol class="steps">
+        <li><h3>Оберіть дизайн і начинку</h3><p>З каталогу або надішліть свою ідею чи фото-референс.</p></li>
+        <li><h3>Заповніть форму</h3><p>Мінімум за 3 дні до свята, для весільних тортів за 2–3 тижні.</p></li>
+        <li><h3>Погодимо деталі</h3><p>Я напишу вам, уточню вагу, декор і назву фінальну ціну.</p></li>
+        <li><h3>Внесіть передоплату</h3><p>50% на картку, і дата закріплюється за вами.</p></li>
+        <li><h3>Заберіть торт</h3><p>Самовивозом або доставкою в спеціальній термокоробці.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== ФОРМА (Google Forms) ===== -->
+  <section id="order" class="block block--cherry">
+    <div class="wrap order">
+      <div class="order__text">
+        <h2>Замовити торт</h2>
+        <p>Заповніть форму, і я відповім протягом кількох годин. Якщо є фото торта, який вам подобається, вкажіть посилання або надішліть мені в Telegram.</p>
+        <p class="order__alt">Зручніше написати? <a href="https://t.me/your_username" target="_blank" rel="noopener">Telegram</a> або <a href="tel:+380000000000">+38 000 000 00 00</a></p>
+      </div>
+      <div class="order__form">
+        <!-- ЗАМІНІТЬ посилання: Google Forms → Надіслати → < > → адреса з src="…" -->
+        <iframe src="https://docs.google.com/forms/d/e/ВАШ_ID_ФОРМИ/viewform?embedded=true" title="Форма замовлення торта" loading="lazy">Завантаження…</iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ПРО МЕНЕ ===== -->
+  <section id="about" class="block">
+    <div class="wrap about">
+      <figure class="about__photo">
+        <img src="images/about.jpg" alt="Кондитерка за роботою" onerror="this.parentElement.classList.add('empty')">
+      </figure>
+      <div class="about__text">
+        <h2>Про мене</h2>
+        <p>Мене звати <b>[Ваше ім'я]</b>. Шість років тому я спекла торт на день народження доньки, і гості попросили контакт «тієї кондитерки». Відтоді я печу щодня.</p>
+        <p>Працюю з натуральними вершками, бельгійським шоколадом і сезонними ягодами. Не використовую мастику: тільки крем, живі квіти, ягоди та шоколадний декор.</p>
+        <p>У місяць беру обмежену кількість замовлень, щоб на кожен торт був час. Тому краще бронювати дату заздалегідь.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ВІДГУКИ ===== -->
+  <section class="block block--pistachio">
+    <div class="wrap">
+      <div class="block__head"><h2>Що кажуть гості</h2></div>
+      <div class="reviews">
+        <blockquote><p>Замовляли дворівневий на весілля. Гості досі питають, де ми його взяли. Начинка з малиною просто неймовірна.</p><cite>Ірина та Максим</cite></blockquote>
+        <blockquote><p>Торт із динозаврами на п'ятиріччя сина. Він не дав його різати пів години, просто дивився.</p><cite>Олена</cite></blockquote>
+        <blockquote><p>Не приторний, легкий, з'їли до крихти. Беремо вже втретє.</p><cite>Андрій</cite></blockquote>
+      </div>
+      <p class="hint">Замініть приклади на справжні відгуки клієнтів.</p>
+    </div>
+  </section>
+
+  <!-- ===== ПИТАННЯ ===== -->
+  <section id="faq" class="block">
+    <div class="wrap faq">
+      <div class="block__head"><h2>Часті питання</h2></div>
+      <details><summary>Скільки важить торт на мою кількість гостей?</summary><p>Розраховуйте 150–200 г на людину. Тобто на 10 гостей потрібен торт 1,5–2 кг. Мінімальна вага 1,5 кг, ярусні торти від 3,5 кг.</p></details>
+      <details><summary>Як рахується ціна?</summary><p>Ціна за кілограм залежить від начинки, плюс декор: фігурки, живі квіти, пряники. Фінальну суму я назву після погодження дизайну.</p></details>
+      <details><summary>Чи можна зробити торт за фото з інтернету?</summary><p>Так, надішліть референс. Я адаптую його під обрану вагу й начинку і скажу, що можна повторити точно, а що краще змінити.</p></details>
+      <details><summary>Як відбувається доставка?</summary><p>По Києву в термокоробці, вартість за тарифом таксі. Ярусні торти доставляю сама й збираю на місці.</p></details>
+      <details><summary>Як зберігати торт?</summary><p>У холодильнику при +2…+6 °C до 3 діб. Дістаньте за 30 хвилин до подачі, так смак розкриється краще.</p></details>
+      <details><summary>У мене алергія. Можна щось змінити?</summary><p>Можу прибрати горіхи та цитрусові. Без молока, яєць і глютену поки не печу. Обов'язково напишіть про алергію у формі.</p></details>
+    </div>
+  </section>
+
+  <!-- ===== КОНТАКТИ ===== -->
+  <section id="contacts" class="block block--choc">
+    <div class="wrap contacts">
+      <div>
+        <h2>Контакти</h2>
+        <p>Приймаю замовлення щодня з 9:00 до 20:00. Самовивіз: Київ, [ваш район], точну адресу надішлю після підтвердження.</p>
+      </div>
+      <ul class="contacts__list">
+        <li><a href="tel:+380000000000"><span>Телефон</span>+38 000 000 00 00</a></li>
+        <li><a href="https://t.me/your_username" target="_blank" rel="noopener"><span>Telegram</span>@your_username</a></li>
+        <li><a href="https://instagram.com/your_username" target="_blank" rel="noopener"><span>Instagram</span>@your_username</a></li>
+        <li><a href="mailto:your@email.com"><span>Пошта</span>your@email.com</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">© <span class="year"></span> Шар за шаром. Торти на замовлення.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
